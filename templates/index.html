@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spending Insights</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Spending Insights</h1>
+
+    <form method="POST" action="/">
+        <label for="amount">Amount spent:</label><br>
+        <input type="number" step="0.01" name="amount" id="amount" required><br><br>
+
+        <label for="reason">Reason for spending:</label><br>
+        <select name="reason" id="reason" required>
+            <option value="personal">Personal choice</option>
+            <option value="social">Social obligation</option>
+            <option value="guilt">Guilt/fear</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if summary %}
+        <h2>Summary</h2>
+        <p>You spent ${{ summary.amount }} for <strong>{{ summary.reason_text }}</strong>.</p>
+        <p>Your independence score: <strong>{{ summary.score }}</strong>/100.</p>
+        <p><em>{{ summary.advice }}</em></p>
+    {% endif %}
+
+    {% if history %}
+        <h2>Previous entries</h2>
+        <ul>
+        {% for e in history %}
+            <li>${{ e.amount }} – {{ e.reason_text }} (score {{ e.score }})</li>
+        {% endfor %}
+        </ul>
+
+        <!-- chart section -->
+        <h3>Reasons overview</h3>
+        <canvas id="historyChart" width="400" height="200"></canvas>
+        <script>
+            // pass history data into JavaScript
+            const historyData = {{ history|tojson }};
+        </script>
+    {% endif %}
+
+    <!-- include Chart.js and our script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
