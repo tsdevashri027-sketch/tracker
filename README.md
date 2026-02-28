@@ -123,7 +123,7 @@ This architecture ensures smooth interaction between the user interface, backend
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
+![https://drive.google.com/file/d/1Y38wVJz6FsWIOd8R5pLGJfTfkiIWB_e4/view?usp=sharing](docs/workflow.png)
 Application Workflow of Spending Insights
 This diagram illustrates the step-by-step workflow of the application. It begins with the user entering expense details, including the amount and emotional reason. The data is then sent to the Flask backend for processing, where it is stored and analyzed. The system calculates the Financial Autonomy Score and generates personalized advice. Finally, the processed results are displayed on the dashboard along with visual insights and graphs.
 
