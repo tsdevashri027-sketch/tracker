@@ -9,20 +9,20 @@
 ### Team Name: [Name]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Devashri] - [Vidya Academy of Science and Technology]
+- Member 2: [Aswana] - [Vidya Academy of Science and Technology]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[http://127.0.0.1:5000/]
 
 ### Project Description
-[2-3 lines about what your project does]
+[Invisible Cost Tracker is a web application that helps users track not just how much they spend, but why they spend it. It identifies emotional and social triggers behind expenses and provides insights to improve financial awareness and independence.]
 
 ### The Problem statement
-[What problem are you solving?]
+[Most expense tracking apps focus only on how much money is spent, but they ignore why the money is spent. Many people make financial decisions due to social pressure, guilt, safety concerns, or emotional triggers, which often go unnoticed and affect their financial independence.]
 
 ### The Solution
-[How are you solving it?]
+[We solve this problem by building a web application that tracks not only the amount spent but also the emotional reason behind each expense. The system stores entries, analyzes patterns, generates insights, and calculates a Financial Autonomy Score to help users understand and improve their spending behavior.]
 
 ---
 
@@ -31,25 +31,25 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [Python, HTML, CSS, JavaScript]
+- Frameworks used: [flask]
+- Libraries used: [Chart.js]
+- Tools used: [Visual Studio Code, Git]
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components: [Laptop/PC, Android smartphone (for testing), Internet connection]
+- Specifications: [Minimum 4GB RAM, modern web browser (Chrome/Edge), Python installed (3.x version)]
+- Tools required: [WiFi router (for local network testing), USB cable (optional for device testing)]
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Emotional Expense Logging – Users can enter the amount spent along with the emotional or social reason behind the spending.]
+- Feature 2: [Spending History Dashboard – Displays all past expenses with date, time, amount, and selected reason in an organized view.]
+- Feature 3: [Financial Autonomy Score – Calculates a score based on spending reasons to measure how much spending is influenced by external pressure versus personal choice.]
+- Feature 4: [Visual Insights & Graphs – Generates charts to show emotional spending patterns over time for better awareness and analysis.]
 
 ---
 
@@ -70,10 +70,16 @@ List the key features of your project:
 ### For Hardware:
 
 #### Components Required
-[List all components needed with specifications]
+[Laptop/PC: Minimum 4GB RAM, Intel i3 (or equivalent) processor, 20GB free storage
+
+Smartphone (for testing): Android device with modern browser (Chrome recommended)
+
+Internet Connection: For hosting, updates, and testing on multiple devices
+
+Software Requirements: Python 3.x, Web Browser (Chrome/Edge), VS Code or any code editor]
 
 #### Circuit Setup
-[Explain how to set up the circuit]
+[This project does not require any physical circuit connections as it is a software-based web application. The system runs on a computer using Python (Flask) for the backend and a web browser for the frontend interface. For testing on mobile devices, both the computer and smartphone should be connected to the same WiFi network or accessed through a hosted link.]
 
 ---
 
@@ -83,26 +89,43 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+!["C:\Users\DEVASHRI\Pictures\Screenshots\Screenshot 2026-02-28 095500.png"](Add screenshot 1 here with proper name)
+Homepage Landing Section of Spending Insights
+This screenshot shows the main landing page of the Spending Insights website. It features a bold headline encouraging users to take control of their money and emotions, a short description explaining the purpose of the platform, and a prominent “Start Tracking Now” call-to-action button. The design uses a clean, modern layout with a purple theme to create a professional and empowering user experience.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+!["C:\Users\DEVASHRI\Pictures\Screenshots\Screenshot 2026-02-28 095554.png"](Add screenshot 2 here with proper name)
+Expense Logging Interface of Spending Insights
+This screenshot displays the expense entry section where users log their spending details. It includes fields to enter the amount spent and select the emotional reason behind the expense. The interface is designed to be simple, supportive, and user-friendly, encouraging honest reflection before submitting the entry to generate personalized insights.
+
+!["C:\Users\DEVASHRI\Pictures\Screenshots\Screenshot 2026-02-28 095302.png"](Add screenshot 3 here with proper name)
+Insight and Financial Autonomy Score Display
+This screenshot shows the results section of the Spending Insights application after an expense is submitted. It displays the total amount entered, the emotional reason behind the spending, the calculated Independence Score, and a personalized advice message. This section provides users with immediate feedback and behavioral insights to encourage more mindful financial decisions.
 
 #### Diagrams
 
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+The system follows a simple client–server architecture.
+
+The frontend is built using HTML, CSS, and JavaScript, which handles user interaction, form submission, and dynamic display of results. When a user logs an expense, the data is sent to the backend server developed using Python with the Flask framework.
+
+The Flask backend processes the input, stores the data in a local file (such as JSON/CSV), calculates the Financial Autonomy (Independence) Score, and generates a personalized advice message. The processed data is then sent back to the frontend.
+
+For visualization, Chart.js is integrated on the frontend to display emotional spending patterns in graphical form.
+
+Data Flow:
+
+User → Web Interface (Form) → Flask Backend → Data Storage → Score Calculation → Response Sent to Frontend → Dashboard & Charts Displayed
+
+This architecture ensures smooth interaction between the user interface, backend logic, and data visualization components.
 
 **Application Workflow:**
 
 ![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+Application Workflow of Spending Insights
+This diagram illustrates the step-by-step workflow of the application. It begins with the user entering expense details, including the amount and emotional reason. The data is then sent to the Flask backend for processing, where it is stored and analyzed. The system calculates the Financial Autonomy Score and generates personalized advice. Finally, the processed results are displayed on the dashboard along with visual insights and graphs.
 
 ---
 
@@ -374,9 +397,13 @@ python script.py -v --format json data.json
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+**Tool Used:** [ChatGPT,Github,Visual Studio Code]
 
-**Purpose:** [What you used it for]
+**Purpose:** [ChatGPT: Assisted with code structure, debugging, UI improvements, and documentation support.
+
+GitHub: Version control, code backup, and project collaboration.
+
+Visual Studio Code: Writing, editing, and managing the project source code.]
 - Example: "Generated boilerplate React components"
 - Example: "Debugging assistance for async functions"
 - Example: "Code review and optimization suggestions"
@@ -386,7 +413,7 @@ If you used AI tools during development, document them here for transparency:
 - "Debug this async function that's causing race conditions"
 - "Optimize this database query for better performance"
 
-**Percentage of AI-generated code:** [Approximately X%]
+**Percentage of AI-generated code:** [30–40%]
 
 **Human Contributions:**
 - Architecture design and planning
@@ -400,9 +427,9 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- [Devashri TS]: [Frontend development using HTML, CSS, and JavaScript, including form design and dashboard layout.]
+- [Aswana]: [Data visualization using Chart.js, UI/UX improvements, testing, debugging, and documentation preparation.]
+  
 
 ---
 
